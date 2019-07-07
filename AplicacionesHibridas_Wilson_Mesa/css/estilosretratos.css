@@ -1,0 +1,133 @@
+@-webkit-keyframes slidein{
+  0%{margin-top: 150%;}
+  60%{margin-top: -5%;}
+  100%{margin-top: 0%;}
+}
+body{
+    margin: 0;
+    font-family: 'Dancing Script', cursive;
+    background-color: #02010a;
+  }
+  #contenido{
+    width:900px;
+    margin: 0 auto;
+  }
+  #header{
+    width: 100%;
+    background-color:#5b7989;
+    border-radius: 10px 10px 0 0;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    animation: slidein 2s;
+  }
+  #head-menu{
+    word-spacing: 2em;
+  }
+  #header #head-menu a[href^="retratos"]{
+    text-decoration: none !important;
+  }
+
+  header>h1{
+    color:white;
+    text-shadow: 2px 2px  #02010a;
+  }
+
+  figure{
+      margin:5%;
+    }
+  figcaption{
+    display:none;
+  }
+  img{
+    width: 100%;
+    -moz-box-shadow: 2px 2px 2px #02010a;
+    -webkit-box-shadow: 2px 2px 2px #02010a;
+    box-shadow: 2px 2px 2px #02010a;
+    border: 1px solid black;
+  }
+  section{
+    background-color: #d5c75f;
+    display: flex;
+    flex-direction: row;
+  }
+  section>div>figure>img{
+    min-height: 50px;
+    flex-basis:30%;
+  }
+  .imagen1 img{
+    -webkit-filter:blur(10px);
+    filter: blur(10px);
+  }
+  div[class$="par"]{
+    -webkit-filter:grayscale(100%);
+    filter:grayscale(100%);
+  }
+  .imagen3 img{
+    -webkit-filter:sepia(90%);
+    filter:sepia(90%);
+  }
+    footer{
+      border-radius: 0 0 10px 10px;
+      background-color:#C6d5c5;
+      margin:0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    footer>div>h3:first-child{
+      text-align: center;
+    }
+    footer>div>p{
+      text-align: center;
+    }
+    footer>div{
+      flex-basis: 25%;
+    }
+
+    @media (min-width:900px){
+      #header{
+        width: 100%;
+      }
+      #head-menu{
+        word-spacing: 2em;
+        margin-left: 35%;
+        margin-top: 2em;
+        vertical-align: middle;
+
+      }
+    }
+    @media (max-width:900px){
+      #contenido{
+        width:100%
+      }
+      #header{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+      section{
+        display: flex;
+        flex-direction: column;
+      }
+      section>div>figure>img{
+        min-height: 50px;
+        flex-basis:30%;
+      }
+       footer{
+         clear:both;
+         border-radius: 0 0 10px 10px;
+         background-color:#C6d5c5;
+         display: flex;
+         flex-direction: column;
+         flex-wrap: wrap;
+       }
+       footer>div>h3:first-child{
+         text-align: center;
+       }
+       footer>div>p{
+         text-align: center;
+       }
+    }
